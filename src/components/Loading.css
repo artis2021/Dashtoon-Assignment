@@ -15,3 +15,11 @@
 .Loading h2{
     width: 80%;
 }
+
+@media (prefers-color-scheme: light) {
+    .Loading{
+        background-color: #f5f5f5;
+    }
+ }
+
+    
