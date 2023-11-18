@@ -30,16 +30,16 @@ const responsiveSettings = [
 
 const indicators = () => (<div className="indicator"></div>);
 
-const image = [
-    {
-        url: 'https://images.unsplash.com/photo-1682685795557-976f03aca7b2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        text: 'This is a test'
-    },
-    {
-        url: 'https://images.unsplash.com/photo-1682685795557-976f03aca7b2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        text: 'This is a test'
-    },
-]
+// const image = [
+//     {
+//         url: 'https://images.unsplash.com/photo-1682685795557-976f03aca7b2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//         text: 'This is a test'
+//     },
+//     {
+//         url: 'https://images.unsplash.com/photo-1682685795557-976f03aca7b2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//         text: 'This is a test'
+//     },
+// ]
 
 type imageInfo = {
     url: string,
@@ -107,8 +107,8 @@ const Comic: React.FC = () => {
             }
         }
         // call the function
-        // fetchImages()
-        setImages(() => image)
+         fetchImages()
+        //setImages(() => image)
         // unsubscribe: reset the state
         return () => {
             setImages(() => [])

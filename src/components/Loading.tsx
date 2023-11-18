@@ -28,7 +28,7 @@ const Loading = () => {
 
     return (
         <div className='Loading'>
-            <ReactLoading type='bars' color='white' height={200} width={200} />
+            <ReactLoading type='bars' className='spin'  height={200} width={200} />
             <h2>{message}</h2>
         </div>
     )
