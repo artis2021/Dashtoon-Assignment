@@ -110,11 +110,11 @@ const Comic: React.FC = () => {
          fetchImages()
         //setImages(() => image)
         // unsubscribe: reset the state
-        return () => {
-            setImages(() => [])
-            setFetching(() => false)
-            setError(() => '')
-        }
+        // return () => {
+        //     setImages(() => [])
+        //     setFetching(() => false)
+        //     setError(() => '')
+        // }
     }, [state])
 
     return (
