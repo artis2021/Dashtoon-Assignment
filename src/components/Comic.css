@@ -1,0 +1,199 @@
+.Comic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+.Comic .title{
+    position: absolute;
+    top: 20px;
+    border: 2px solid #b7b7b7;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 512px;
+    border-radius: 10px;
+    margin: 5px;
+    border: 4px solid #fff; 
+}
+
+.slide{
+    overflow: hidden;
+    width: 1040px !important;
+    border-radius: 10px;
+    margin-top: 40px
+}
+
+.prev-arrow{
+    transform: translateX(20px);
+    background-color: rgba(0,0,0,0.5);
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.next-arrow{
+    transform: translateX(-20px);
+    background-color: rgba(0,0,0,0.5);
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.prev-arrow:hover, .next-arrow:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.indicator {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    border: 1px #d4d4d4 solid;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background: #f4f4f4;
+}
+
+.Comic .error{
+    font-size: 1.5rem;
+    color:  #dc5353;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Comic .error h1{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.Comic .button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #313131;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #f5f5f5;
+    transition: 0.3s ease all;
+}
+
+.Comic .button:hover{
+    background: #00ab67;
+}
+
+.Comic .button:active{
+    transform: scale(0.9);
+}
+
+/* breakpoint at  1024px */
+@media screen and (max-width: 1024px) {
+    .slide{
+        width: 520px !important;
+    }
+    .each-slide > div {
+        height: 512px;
+        width: 512px;
+    }
+}
+
+/* breakpoint at  768px */
+@media screen and (max-width: 768px) {
+    .slide{
+        width: 520px !important;
+    }
+    .each-slide > div {
+        height: 512px;
+        width: 512px;
+    }
+    .Comic .title{
+        font-size: 1.7rem;
+    }
+}
+
+
+/* breakpoint at  600px */
+@media screen and (max-width: 600px) {
+    .slide{
+        width: 408px !important;
+    }
+    
+    .each-slide > div{
+        width: 400px;
+        height: 400px;
+    }
+
+    .Comic .title{
+        font-size: 1.5rem;
+    }
+}
+
+/* breakpoint at  375px */
+@media screen and (max-width: 425px) {
+    .slide{
+        width: 318px !important;
+    }
+    .each-slide > div{
+        width: 310px;
+        height: 310px;
+    }
+}
+
+/* Light mode */
+@media screen and (prefers-color-scheme: light) {
+    
+    .Comic .title{
+        border: 2px solid #000;
+    }
+    .prev-arrow, .next-arrow{
+        background-color: rgba(255,255,255,0.5);
+    }
+    .prev-arrow:hover, .next-arrow:hover{
+        background-color: rgba(255,255,255,0.8);
+    }
+    .indicator {
+        border: 1px #3b3b3b solid;
+        background-color:  #c8c7c7;
+    }
+    .indicator.active {
+        background: #3b3b3b;
+    }
+    .each-slide > div{
+        border: 4px solid #303030;   
+    }
+    .Comic .button{
+        background: #ffffff;
+        border: 2px solid #2d7ccb;
+        color: #313131;
+    }
+
+    .Comic .button:hover{
+        background: #2d7ccb;
+        color: #f5f5f5;
+    }
+}
+
+
